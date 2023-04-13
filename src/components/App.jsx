@@ -1,17 +1,20 @@
-import './App.css';
-import Dashboard from './Dashboard/Dashboard';
-import GroupCreator from './GroupCreator/GroupCreator';
-import { HashRouter as Router, Route, Link } from "react-router-dom";
+import "./App.css";
+import Dashboard from "./Dashboard/Dashboard";
+import UserDashboard from "./UserDashboard/UserDashboard";
+import SideBar from "./SideBar/SideBar";
+import { HashRouter as Router, Route } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
+      {/* <UserDashboard /> */}
       <Router>
-        <Route path='/' exact>
-          <GroupCreator />
+        <Route path="/" exact>
+          <SideBar />
+          <UserDashboard />
         </Route>
-        <Route path='/dashboard'>
-          <Dashboard />
+        <Route path="/dashboard">
+          
         </Route>
       </Router>
     </div>
